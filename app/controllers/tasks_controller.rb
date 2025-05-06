@@ -37,7 +37,8 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
     @task.destroy
     # redirect to show url page where with the new instance of a task
-    redirect_to task_path(@task), status: :see_other
+    redirect_to tasks_path(@task), status: :see_other
+    # path of the index to see that it doesn t exist anymore
   end
 
   private
