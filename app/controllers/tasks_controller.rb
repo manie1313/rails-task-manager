@@ -7,6 +7,7 @@ class TasksController < ApplicationController
     # raise
     # one task per id so convention name @task sg and not plr
     @task = Task.find(params[:id])
+    # we can have access to the id because the url path has the id in it task/id
   end
 
   def new
